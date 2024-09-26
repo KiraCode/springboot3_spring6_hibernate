@@ -6,5 +6,5 @@ import com.example.demo.entity.Employee;
 
 public interface EmployeeDao {
 
-	List<Employee> findAll();
+	public List<Employee> findAll();
 }
