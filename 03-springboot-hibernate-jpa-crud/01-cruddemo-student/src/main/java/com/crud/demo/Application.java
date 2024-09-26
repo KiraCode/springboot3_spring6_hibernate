@@ -26,9 +26,21 @@ public class Application {
 			
 //			readObject(student);
 			
-			queryForStudents(student);
+//			queryForStudents(student);
+			
+//			queryForStudents(student);
+			
+			queryForLastName(student);
 		};
 
+	}
+
+	private void queryForLastName(StudentDao student) {
+		List<Student> studentList = student.findByLastName("HeyMan");
+		for(Student s : studentList) {
+			System.out.println(s);
+		}
+		
 	}
 
 	private void queryForStudents(StudentDao student) {
