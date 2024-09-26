@@ -1,11 +1,10 @@
-package com.example.demo.dao.impl;
+package com.example.demo.dao;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.dao.EmployeeDao;
 import com.example.demo.entity.Employee;
 
 import jakarta.persistence.EntityManager;
