@@ -1,5 +1,7 @@
 package com.crud.demo;
 
+import java.util.List;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,10 +21,22 @@ public class Application {
 	public CommandLineRunner commandLineRunner(StudentDao student) {
 		return runner -> {
 //			createStudent(student);
+			
 //			createMultipleStudents(student);
-			readObject(student);
+			
+//			readObject(student);
+			
+			queryForStudents(student);
 		};
 
+	}
+
+	private void queryForStudents(StudentDao student) {
+		List<Student> studentList = student.findAll();
+		for(Student s : studentList) {
+			System.out.println(s);
+		}
+		
 	}
 
 	private void readObject(StudentDao studentDao) {
