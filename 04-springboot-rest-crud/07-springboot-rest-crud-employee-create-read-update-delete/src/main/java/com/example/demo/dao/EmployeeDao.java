@@ -8,7 +8,7 @@ public interface EmployeeDao {
 
 	public List<Employee> findAll();
 	
-	public void save(Employee employee);
+	public Employee save(Employee employee);
 	
 	public Employee findById(int empId);
 	

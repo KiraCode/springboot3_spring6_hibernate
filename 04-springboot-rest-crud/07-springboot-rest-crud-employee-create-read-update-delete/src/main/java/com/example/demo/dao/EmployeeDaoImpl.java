@@ -27,21 +27,21 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	}
 
 	@Override
-	public void save(Employee employee) {
-		// TODO Auto-generated method stub
-
+	public Employee save(Employee employee) {
+		Employee theEmployee = manager.merge(employee);
+		return theEmployee; 	
 	}
 
 	@Override
 	public Employee findById(int empId) {
-		// TODO Auto-generated method stub
-		return null;
+		Employee employee = manager.find(Employee.class, empId);
+		return employee;
 	}
 
 	@Override
 	public void delete(int empId) {
-		// TODO Auto-generated method stub
-
+		Employee employee = manager.find(Employee.class, empId);
+		manager.remove(employee);
 	}
 
 }
