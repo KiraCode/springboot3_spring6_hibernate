@@ -6,6 +6,11 @@ import com.example.demo.entity.Employee;
 
 public interface EmployeeService {
 
-	List<Employee> findAll();
-
+	public List<Employee> findAll();
+	
+	public Employee save(Employee employee);
+	
+	public Employee findById(int empId);
+	
+	public void delete(int empId);
 }
