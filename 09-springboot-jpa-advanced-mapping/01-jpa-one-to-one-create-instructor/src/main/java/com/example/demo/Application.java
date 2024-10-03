@@ -24,9 +24,15 @@ public class Application {
 	}
 
 	private void createIstructor(AppDao appDao) {
-		Instructor instructor = new Instructor("Alexa", "Bliss", "alexabliss@gmail.com");
-		InstructorDetail instructorDetail = new InstructorDetail("www.fight.com", "wrestle");
-		instructor.setInstructorDetail(instructorDetail);
-		appDao.save(instructor);
+		Instructor instructor1 = new Instructor("Chad", "Darby", "chaddarby@gmail.com");
+		InstructorDetail instructorDetail1 = new InstructorDetail("www.luv2code.com", "coding");
+		instructor1.setInstructorDetail(instructorDetail1);
+		
+		Instructor instructor2 = new Instructor("Alexa", "Bliss", "alexabliss@gmail.com");
+		InstructorDetail instructorDetail2 = new InstructorDetail("www.fight.com", "wrestle");
+		instructor2.setInstructorDetail(instructorDetail2);
+		appDao.save(instructor1);
+		appDao.save(instructor2);
+
 	}
 }
