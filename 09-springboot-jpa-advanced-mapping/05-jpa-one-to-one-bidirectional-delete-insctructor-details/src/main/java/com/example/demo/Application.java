@@ -20,7 +20,7 @@ public class Application {
 		};
 	}
 	private void deleteInstructorDetail(AppDao appDao) {
-		int id = 1;
+		int id = 6;
 		appDao.deleteInstructorsDetails(id);
 		System.out.println("Syccessfuly deleting");
 	}
